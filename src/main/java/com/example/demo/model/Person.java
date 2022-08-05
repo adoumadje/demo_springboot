@@ -1,13 +1,13 @@
 package com.example.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.lang.NonNull;
+import org.hibernate.validator.constraints.NotBlank;
 
 import java.util.UUID;
 
 public class Person {
     private final UUID id;
-    @NonNull
+    @NotBlank
     private final String name;
 
     public Person(@JsonProperty("id") UUID id,
